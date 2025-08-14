@@ -632,7 +632,7 @@ body.loaded {
   }
 
   .logo-img {
-    height: clamp(70px, 15vw, 100px);
+    height: clamp(90px, 18vw, 120px);
   }
 
   /* Hero Mobile */
@@ -642,7 +642,7 @@ body.loaded {
 
   .hero-bg {
     min-height: clamp(450px, 90vh, 750px);
-    background-position: center 75%;
+    background-position: center 45%;
     background-size: cover;
     background-attachment: scroll;
   }
@@ -656,18 +656,18 @@ body.loaded {
   }
 
   .hero-title {
-    font-size: clamp(26px, 8vw, 44px);
+    font-size: clamp(30px, 9vw, 48px);
     margin-bottom: clamp(12px, 3vh, 22px);
   }
 
   .hero-cta {
-    font-size: clamp(15px, 4vw, 18px);
-    padding: clamp(12px, 2.5vh, 18px) clamp(20px, 5vw, 28px);
+    font-size: clamp(16px, 4.2vw, 20px);
+    padding: clamp(14px, 2.8vh, 20px) clamp(22px, 5.5vw, 30px);
   }
 
   .hamburger-icon {
-    width: clamp(36px, 9vw, 48px);
-    height: clamp(36px, 9vw, 48px);
+    width: clamp(42px, 10vw, 56px);
+    height: clamp(42px, 10vw, 56px);
   }
 
   /* Sobre Nós Mobile */
@@ -719,27 +719,27 @@ body.loaded {
 
   .hero-bg {
     min-height: clamp(400px, 85vh, 650px);
-    background-position: center 70%;
+    background-position: center 45%;
     background-size: cover;
   }
 
   .hero-title {
-    font-size: clamp(24px, 8vw, 38px);
+    font-size: clamp(28px, 9vw, 42px);
     letter-spacing: clamp(0.4px, 0.12vw, 1px);
   }
 
   .hero-cta {
-    font-size: clamp(15px, 5vw, 17px);
-    padding: clamp(12px, 2.5vh, 16px) clamp(20px, 6vw, 26px);
+    font-size: clamp(16px, 5.2vw, 19px);
+    padding: clamp(14px, 2.8vh, 18px) clamp(22px, 6.2vw, 28px);
   }
 
   .hamburger-icon {
-    width: clamp(38px, 10vw, 46px);
-    height: clamp(38px, 10vw, 46px);
+    width: clamp(44px, 11vw, 52px);
+    height: clamp(44px, 11vw, 52px);
   }
 
   .logo-img {
-    height: clamp(60px, 16vw, 80px);
+    height: clamp(80px, 18vw, 100px);
   }
 
   /* Sobre Nós Mobile Muito Pequeno */
