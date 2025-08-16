@@ -231,7 +231,7 @@ body.loaded {
   z-index: 2;
   color: var(--branco);
   max-width: clamp(300px, 50vw, 600px);
-  margin-top: clamp(120px, 12vh, 160px);
+  margin-top: clamp(160px, 12vh, 160px);
   padding-top: clamp(20px, 3vh, 40px);
 
   /* Garante centralização proporcional */
@@ -241,7 +241,7 @@ body.loaded {
 
 .hero-title {
   color: var(--areia-clara);
-  font-size: clamp(32px, 6.7vw, 96px);
+  font-size: clamp(42px, 6.7vw, 96px);
   font-weight: 500;
   line-height: normal;
   letter-spacing: clamp(0.64px, 0.134vw, 1.92px);
@@ -293,8 +293,11 @@ body.loaded {
 }
 
 .sobre-nos-text {
-  max-width: clamp(800px, 70vw, 1000px);
+  max-width: clamp(800px, 70vw, 1200px);
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
 }
 
 .sobre-nos-title {
@@ -312,8 +315,8 @@ body.loaded {
 
 .sobre-nos-title::before {
   content: "";
-  width: clamp(30px, 4vw, 50px);
-  height: clamp(30px, 4vw, 50px);
+  width: clamp(30px, 4vw, 70px);
+  height: clamp(30px, 4vw, 70px);
   background-image: url("../imgs/icons/title_icon.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -340,6 +343,7 @@ body.loaded {
   font-weight: 500;
   line-height: 136.626%;
   letter-spacing: 2.2px;
+  text-align: justify;
 }
 
 .sobre-nos-description p {
@@ -351,8 +355,8 @@ body.loaded {
 }
 
 .sobre-nos-profile-img {
-  width: clamp(150px, 18vw, 230px);
-  height: clamp(150px, 18vw, 230px);
+  width: clamp(150px, 18vw, 310px);
+  height: clamp(150px, 18vw, 310px);
   border-radius: 50%;
   object-fit: cover;
   float: left;
@@ -780,6 +784,369 @@ body.loaded {
     margin: 0 clamp(12px, 3vw, 18px) clamp(8px, 1.5vh, 12px) 0;
     shape-outside: circle(50%);
     shape-margin: clamp(8px, 1.5vw, 12px);
+  }
+}
+
+/* ===== NOSSOS SERVIÇOS SECTION ===== */
+.servicos {
+  padding: clamp(80px, 10vh, 140px) 0;
+  background-color: var(--areia-clara);
+  position: relative;
+}
+
+.servicos-header {
+  grid-column: 2 / 12;
+  text-align: left;
+  margin-bottom: clamp(50px, 6vh, 80px);
+}
+
+.servicos-title {
+  color: var(--preto);
+  font-family: Montserrat;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  align-items: center;
+  gap: clamp(15px, 2vw, 25px);
+  margin-bottom: clamp(20px, 3vh, 30px);
+}
+
+.servicos-title::before {
+  content: "";
+  width: clamp(40px, 5vw, 80px);
+  height: clamp(40px, 5vw, 80px);
+  background-image: url("../imgs/icons/title_icon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.servicos-container {
+  grid-column: 2 / 12;
+  display: flex;
+  height: clamp(400px, 50vh, 600px);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  align-items: stretch;
+}
+
+.servico-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  padding: clamp(10px, 1.5vh, 15px);
+  overflow: hidden;
+  height: 100%;
+}
+
+.servico-card:hover {
+  flex: 2.5;
+}
+
+.servico-card:not(:hover) {
+  flex: 0.8;
+}
+
+/* ===== CENTRALIZAÇÃO VERTICAL E HORIZONTAL PERFEITA ===== */
+.servico-card,
+.servico-card:hover,
+.servico-card:not(:hover) {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.servico-icon,
+.servico-content {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+.servico-content {
+  flex-direction: column !important;
+}
+
+.servico-titulo,
+.servico-descricao {
+  text-align: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* ===== CENTRALIZAÇÃO ESPECÍFICA PARA CONTEÚDO ===== */
+.servico-card .servico-content {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  gap: clamp(4px, 0.8vh, 8px) !important;
+}
+
+.servico-icon {
+  margin-bottom: clamp(8px, 1.5vh, 12px);
+  transition: all 0.4s ease;
+  z-index: 2;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.servico-icon img {
+  width: clamp(45px, 6vw, 65px);
+  height: clamp(45px, 6vw, 65px);
+  object-fit: contain;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  border-radius: 17px;
+  background: rgba(217, 217, 217, 0.38);
+  padding: clamp(8px, 1.5vh, 12px);
+}
+
+.servico-content {
+  z-index: 2;
+  position: relative;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.servico-titulo {
+  color: var(--branco);
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 18px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 0;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+}
+
+.servico-descricao {
+  color: rgba(255, 255, 255, 0.95);
+  font-family: Montserrat;
+  font-size: clamp(12px, 1.3vw, 15px);
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.5s ease 0.2s;
+  max-width: 85%;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  padding: 0 clamp(5px, 1vw, 10px);
+  position: absolute;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+/* ===== HOVER EFFECTS DESKTOP ===== */
+@media (hover: hover) and (pointer: fine) {
+  .servico-card:hover .servico-descricao {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+    visibility: visible;
+    height: auto;
+    overflow: visible;
+    margin-top: clamp(8px, 1.5vh, 12px);
+  }
+
+  .servico-card:hover .servico-icon {
+    margin-bottom: clamp(10px, 2vh, 15px);
+  }
+
+  .servico-card:hover .servico-icon img {
+    width: clamp(50px, 6.5vw, 70px);
+    height: clamp(50px, 6.5vw, 70px);
+    transform: scale(1.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.6);
+    padding: clamp(10px, 1.8vh, 14px);
+  }
+
+  .servico-card:hover .servico-titulo {
+    font-size: clamp(16px, 2vw, 20px);
+    margin-bottom: clamp(5px, 1vh, 8px);
+  }
+
+  .servico-card:hover .servico-content {
+    gap: clamp(6px, 1.2vh, 10px) !important;
+  }
+
+  .servico-card:hover .servico-content {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ===== CORES ESPECÍFICAS DOS CARDS ===== */
+.servico-pintura {
+  background-color: var(--laranja);
+}
+
+.servico-textura {
+  background-color: var(--preto);
+}
+
+.servico-microcimento {
+  background-color: var(--azul-aco);
+}
+
+.servico-forro {
+  background-color: var(--lapis-lazuli);
+}
+
+.servico-granilite {
+  background-color: var(--azul-yale);
+}
+/* ===== RESPONSIVIDADE SERVIÇOS - TABLETS ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .servicos-container {
+    height: clamp(280px, 35vh, 400px);
+  }
+
+  .servico-card:hover {
+    flex: 2.2;
+  }
+
+  .servico-icon img {
+    width: clamp(45px, 6vw, 70px);
+    height: clamp(45px, 6vw, 70px);
+    border-radius: 30.5px;
+    background: rgba(217, 217, 217, 0.38);
+    padding: clamp(10px, 1.8vh, 16px);
+  }
+}
+
+/* ===== RESPONSIVIDADE SERVIÇOS - MOBILE ===== */
+@media (max-width: 768px) {
+  .servicos {
+    padding: clamp(60px, 8vh, 100px) 0;
+  }
+
+  .servicos-header {
+    grid-column: 1 / 13;
+    margin-bottom: clamp(40px, 5vh, 60px);
+    text-align: center;
+  }
+
+  .servicos-container {
+    grid-column: 1 / 13;
+    flex-direction: column;
+    height: auto;
+    gap: 2px;
+  }
+
+  .servico-card {
+    flex: none;
+    min-height: clamp(120px, 15vh, 150px);
+    padding: clamp(15px, 3vh, 25px);
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .servico-card:hover {
+    flex: none;
+  }
+
+  .servico-card:not(:hover) {
+    flex: none;
+  }
+
+  .servico-descricao {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
+    margin-top: clamp(8px, 1.5vh, 12px);
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
+
+  .servico-titulo {
+    font-size: clamp(14px, 3.8vw, 18px);
+    margin-bottom: clamp(5px, 1vh, 8px);
+  }
+
+  .servico-icon {
+    margin-bottom: clamp(8px, 1.5vh, 12px);
+  }
+
+  .servico-icon img {
+    width: clamp(40px, 8vw, 55px);
+    height: clamp(40px, 8vw, 55px);
+    border-radius: 30.5px;
+    background: rgba(217, 217, 217, 0.38);
+    padding: clamp(8px, 1.5vh, 12px);
+  }
+}
+
+/* ===== RESPONSIVIDADE SERVIÇOS - MOBILE PEQUENO ===== */
+@media (max-width: 480px) {
+  .servicos {
+    padding: clamp(50px, 7vh, 80px) 0;
+  }
+
+  .servicos-title {
+    font-size: clamp(24px, 6vw, 32px);
+    justify-content: center;
+  }
+
+  .servicos-title::before {
+    width: clamp(30px, 7vw, 50px);
+    height: clamp(30px, 7vw, 50px);
+  }
+
+  .servico-card {
+    min-height: clamp(100px, 12vh, 130px);
+    padding: clamp(12px, 2.5vh, 20px);
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .servico-titulo {
+    font-size: clamp(13px, 3.5vw, 16px);
+  }
+
+  .servico-descricao {
+    font-size: clamp(11px, 3vw, 13px);
+  }
+
+  .servico-icon img {
+    width: clamp(35px, 7vw, 45px);
+    height: clamp(35px, 7vw, 45px);
+    border-radius: 30.5px;
+    background: rgba(217, 217, 217, 0.38);
+    padding: clamp(6px, 1.2vh, 10px);
   }
 }
 
