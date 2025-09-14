@@ -833,6 +833,15 @@ body.loaded {
   align-items: stretch;
 }
 
+/* ===== RESET DE ALTURA PARA MOBILE - FORÇA CONTAINER A NÃO TER ALTURA FIXA ===== */
+@media (max-width: 768px) {
+  .servicos-container {
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+  }
+}
+
 .servico-card {
   flex: 1;
   display: flex;
@@ -848,6 +857,7 @@ body.loaded {
   height: 100%;
 }
 
+/* ===== DESKTOP HOVER EFFECTS ===== */
 .servico-card:hover {
   flex: 2.5;
 }
@@ -1042,111 +1052,6 @@ body.loaded {
     border-radius: 30.5px;
     background: rgba(217, 217, 217, 0.38);
     padding: clamp(10px, 1.8vh, 16px);
-  }
-}
-
-/* ===== RESPONSIVIDADE SERVIÇOS - MOBILE ===== */
-@media (max-width: 768px) {
-  .servicos {
-    padding: clamp(60px, 8vh, 100px) 0;
-  }
-
-  .servicos-header {
-    grid-column: 1 / 13;
-    margin-bottom: clamp(40px, 5vh, 60px);
-    text-align: center;
-  }
-
-  .servicos-container {
-    grid-column: 1 / 13;
-    flex-direction: column;
-    height: auto;
-    gap: 2px;
-  }
-
-  .servico-card {
-    flex: none;
-    min-height: clamp(120px, 15vh, 150px);
-    padding: clamp(15px, 3vh, 25px);
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .servico-card:hover {
-    flex: none;
-  }
-
-  .servico-card:not(:hover) {
-    flex: none;
-  }
-
-  .servico-descricao {
-    opacity: 1;
-    transform: translateY(0);
-    transition-delay: 0s;
-    margin-top: clamp(8px, 1.5vh, 12px);
-    font-size: clamp(12px, 3.2vw, 14px);
-  }
-
-  .servico-titulo {
-    font-size: clamp(14px, 3.8vw, 18px);
-    margin-bottom: clamp(5px, 1vh, 8px);
-  }
-
-  .servico-icon {
-    margin-bottom: clamp(8px, 1.5vh, 12px);
-  }
-
-  .servico-icon img {
-    width: clamp(40px, 8vw, 55px);
-    height: clamp(40px, 8vw, 55px);
-    border-radius: 30.5px;
-    background: rgba(217, 217, 217, 0.38);
-    padding: clamp(8px, 1.5vh, 12px);
-  }
-}
-
-/* ===== RESPONSIVIDADE SERVIÇOS - MOBILE PEQUENO ===== */
-@media (max-width: 480px) {
-  .servicos {
-    padding: clamp(50px, 7vh, 80px) 0;
-  }
-
-  .servicos-title {
-    font-size: clamp(24px, 6vw, 32px);
-    justify-content: center;
-  }
-
-  .servicos-title::before {
-    width: clamp(30px, 7vw, 50px);
-    height: clamp(30px, 7vw, 50px);
-  }
-
-  .servico-card {
-    min-height: clamp(100px, 12vh, 130px);
-    padding: clamp(12px, 2.5vh, 20px);
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .servico-titulo {
-    font-size: clamp(13px, 3.5vw, 16px);
-  }
-
-  .servico-descricao {
-    font-size: clamp(11px, 3vw, 13px);
-  }
-
-  .servico-icon img {
-    width: clamp(35px, 7vw, 45px);
-    height: clamp(35px, 7vw, 45px);
-    border-radius: 30.5px;
-    background: rgba(217, 217, 217, 0.38);
-    padding: clamp(6px, 1.2vh, 10px);
   }
 }
 
@@ -1560,4 +1465,513 @@ body.loaded {
 
 .galeria-item:nth-child(n + 7) {
   animation-delay: 0.6s;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
+  padding: clamp(60px, 8vh, 100px) 0 0 0;
+  position: relative;
+}
+
+.footer-content {
+  grid-column: 2 / 12;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(30px, 4vw, 50px);
+  margin-bottom: clamp(40px, 5vh, 60px);
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(15px, 2vh, 20px);
+}
+
+/* ===== FOOTER LOGO E ABOUT ===== */
+.footer-logo {
+  margin-bottom: clamp(10px, 1.5vh, 15px);
+}
+
+.footer-logo-img {
+  height: clamp(60px, 8vw, 100px);
+  width: auto;
+}
+
+.footer-section-title {
+  color: var(--branco);
+  font-family: Montserrat;
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  margin-bottom: clamp(10px, 1.5vh, 15px);
+}
+
+.footer-about-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: clamp(15px, 2vh, 20px);
+}
+
+/* ===== FOOTER SOCIAL ===== */
+.footer-social {
+  display: flex;
+  gap: clamp(10px, 1.5vw, 15px);
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(40px, 5vw, 50px);
+  height: clamp(40px, 5vw, 50px);
+  background-color: var(--lapis-lazuli);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social-link:hover {
+  background-color: var(--laranja);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 106, 0, 0.3);
+}
+
+.footer-social-icon {
+  width: clamp(20px, 2.5vw, 26px);
+  height: clamp(20px, 2.5vw, 26px);
+  filter: brightness(0) invert(1);
+}
+
+/* ===== FOOTER LINKS ===== */
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(8px, 1vh, 12px);
+}
+
+.footer-link {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: clamp(4px, 0.5vh, 6px) 0;
+}
+
+.footer-link:hover {
+  color: var(--laranja);
+  transform: translateX(5px);
+  font-weight: 500;
+}
+
+/* ===== FOOTER CONTACT ===== */
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 1.5vh, 18px);
+  margin-bottom: clamp(20px, 2.5vh, 30px);
+}
+
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(4px, 0.5vh, 6px);
+}
+
+.footer-contact-label {
+  color: var(--laranja);
+  font-family: Montserrat;
+  font-size: clamp(13px, 1.6vw, 15px);
+  font-weight: 600;
+}
+
+.footer-contact-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  color: var(--laranja);
+}
+
+.footer-contact-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Montserrat;
+  font-size: clamp(14px, 1.8vw, 16px);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ===== FOOTER CTA BUTTON ===== */
+.footer-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1vw, 12px);
+  background-color: var(--lapis-lazuli);
+  color: var(--branco);
+  text-decoration: none;
+  padding: clamp(12px, 1.5vh, 18px) clamp(20px, 2.5vw, 30px);
+  border-radius: 25px;
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: clamp(14px, 1.8vw, 16px);
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.footer-cta-btn::after {
+  content: "";
+  width: clamp(16px, 1.5vw, 20px);
+  height: clamp(16px, 1.5vw, 20px);
+  background-image: url("../imgs/whatsapp_logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.footer-cta-btn:hover {
+  background-color: var(--laranja);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 106, 0, 0.3);
+  font-weight: 700;
+}
+
+/* ===== FOOTER BOTTOM ===== */
+.footer-bottom {
+  background-color: var(--preto);
+  padding: clamp(20px, 3vh, 30px) 0;
+}
+
+.footer-bottom-content {
+  grid-column: 2 / 12;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: clamp(8px, 1vh, 12px);
+}
+
+.footer-copyright {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Montserrat;
+  font-size: clamp(12px, 1.5vw, 14px);
+  font-weight: 400;
+  margin: 0;
+}
+
+.footer-credits {
+  color: rgba(255, 255, 255, 0.5);
+  font-family: Montserrat;
+  font-size: clamp(11px, 1.4vw, 13px);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ===== RESPONSIVIDADE FOOTER - TABLETS ===== */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .footer-content {
+    grid-column: 2 / 11;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: clamp(30px, 4vw, 50px);
+  }
+
+  .footer-bottom-content {
+    grid-column: 2 / 11;
+  }
+}
+
+/* ===== RESPONSIVIDADE FOOTER - TABLET PEQUENO ===== */
+@media (max-width: 768px) {
+  .footer {
+    padding: clamp(50px, 7vh, 80px) 0 0 0;
+  }
+
+  .footer-content {
+    grid-column: 1 / 13;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: clamp(30px, 4vw, 40px);
+    margin-bottom: clamp(30px, 4vh, 50px);
+  }
+
+  .footer-bottom-content {
+    grid-column: 1 / 13;
+  }
+}
+
+/* ===== RESPONSIVIDADE FOOTER - MOBILE ===== */
+@media (max-width: 600px) {
+  .footer {
+    padding: clamp(40px, 6vh, 60px) 0 0 0;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: clamp(25px, 4vw, 35px);
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-about {
+    text-align: left;
+  }
+
+  .footer-links-list {
+    align-items: center;
+  }
+
+  .footer-contact-info {
+    text-align: left;
+  }
+
+  .footer-cta-btn {
+    align-self: center;
+  }
+
+  .footer-social {
+    justify-content: flex-start;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    gap: clamp(6px, 1vh, 10px);
+  }
+}
+
+/* ===== RESPONSIVIDADE FOOTER - MOBILE PEQUENO ===== */
+@media (max-width: 480px) {
+  .footer {
+    padding: clamp(35px, 5vh, 50px) 0 0 0;
+  }
+
+  .footer-section-title {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  .footer-about-text {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .footer-link {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .footer-contact-label {
+    font-size: clamp(12px, 3.2vw, 14px);
+  }
+
+  .footer-contact-link,
+  .footer-contact-text {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .footer-cta-btn {
+    padding: clamp(10px, 1.5vh, 15px) clamp(18px, 4vw, 25px);
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .footer-logo-img {
+    height: clamp(50px, 12vw, 80px);
+  }
+
+  .footer-social-link {
+    width: clamp(35px, 8vw, 45px);
+    height: clamp(35px, 8vw, 45px);
+  }
+
+  .footer-social-icon {
+    width: clamp(18px, 4vw, 22px);
+    height: clamp(18px, 4vw, 22px);
+  }
+}
+
+/* ===== ANIMAÇÕES FOOTER ===== */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer-section {
+  animation: slideUp 0.6s ease-out;
+}
+
+.footer-section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.footer-section:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* ===== LAYOUT MOBILE OTIMIZADO - CARDS COM MAIS ESPAÇO ===== */
+@media screen and (max-width: 768px) {
+  .servicos {
+    padding: clamp(60px, 10vh, 100px) 0;
+  }
+
+  .servicos-header {
+    grid-column: 1 / 13;
+    text-align: center;
+    margin-bottom: clamp(60px, 8vh, 90px) !important;
+  }
+
+  .servicos-container {
+    grid-column: 1 / 13;
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: auto !important;
+    max-height: none !important;
+    gap: clamp(18px, 3.5vh, 25px) !important;
+    align-items: stretch !important;
+    overflow: visible !important;
+  }
+
+  .servico-card {
+    flex: none !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: clamp(160px, 18vh, 180px) !important;
+    max-height: none !important;
+    padding: clamp(25px, 4vh, 30px) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    border-radius: 15px !important;
+    box-sizing: border-box !important;
+    transform: none !important;
+    transition: all 0.3s ease !important;
+  }
+
+  .servico-card:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .servico-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    gap: clamp(12px, 2.5vh, 18px) !important;
+  }
+
+  .servico-icon {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: clamp(10px, 2vh, 15px) !important;
+  }
+
+  .servico-icon img {
+    width: clamp(50px, 9vw, 60px) !important;
+    height: clamp(50px, 9vw, 60px) !important;
+    padding: clamp(12px, 2.5vh, 16px) !important;
+    border-radius: 14px !important;
+    background: rgba(255, 255, 255, 0.25) !important;
+  }
+
+  .servico-titulo {
+    font-size: clamp(17px, 4.2vw, 22px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: clamp(6px, 1.2vh, 10px) !important;
+    text-align: center !important;
+  }
+
+  .servico-descricao {
+    font-size: clamp(15px, 3.8vw, 17px) !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+    text-align: center !important;
+    padding: 0 clamp(12px, 2.5vw, 18px) !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+    visibility: visible !important;
+    height: auto !important;
+    overflow: visible !important;
+    margin-top: 0 !important;
+  }
+}
+
+/* ===== MOBILE PEQUENO - CARDS AMPLIADOS ===== */
+@media screen and (max-width: 480px) {
+  .servicos {
+    padding: clamp(50px, 8vh, 80px) 0;
+  }
+
+  .servicos-header {
+    margin-bottom: clamp(50px, 7vh, 70px) !important;
+  }
+
+  .servicos-title {
+    font-size: clamp(24px, 6vw, 32px);
+    justify-content: center;
+  }
+
+  .servicos-title::before {
+    width: clamp(30px, 7vw, 50px);
+    height: clamp(30px, 7vw, 50px);
+  }
+
+  .servicos-container {
+    gap: clamp(15px, 3vh, 22px) !important;
+  }
+
+  .servico-card {
+    min-height: clamp(150px, 17vh, 170px) !important;
+    padding: clamp(22px, 3.5vh, 28px) !important;
+  }
+
+  .servico-content {
+    gap: clamp(10px, 2.2vh, 15px) !important;
+  }
+
+  .servico-icon {
+    margin-bottom: clamp(8px, 1.8vh, 12px) !important;
+  }
+
+  .servico-icon img {
+    width: clamp(45px, 10vw, 55px) !important;
+    height: clamp(45px, 10vw, 55px) !important;
+    padding: clamp(10px, 2.2vh, 14px) !important;
+  }
+
+  .servico-titulo {
+    font-size: clamp(16px, 4.5vw, 20px) !important;
+    margin-bottom: clamp(5px, 1vh, 8px) !important;
+  }
+
+  .servico-descricao {
+    font-size: clamp(14px, 4vw, 16px) !important;
+    padding: 0 clamp(10px, 2.2vw, 15px) !important;
+    line-height: 1.4 !important;
+  }
 }
